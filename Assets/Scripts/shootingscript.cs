@@ -7,12 +7,14 @@ public class shootingscript : MonoBehaviour
     public float firerate;
     float firecooldown = 0;
     public Transform projectile;
+    // public KeyCode shootKey;
+    public string ShootButton;
     // Update is called once per frame
     void Update()
     {
         firecooldown += Time.deltaTime;
 
-        if (firecooldown >= firerate )
+        if (firecooldown >= firerate && Input.GetButton(ShootButton) )
         {
             shoot();
             firecooldown = 0;

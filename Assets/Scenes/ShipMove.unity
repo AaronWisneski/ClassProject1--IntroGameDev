@@ -152,6 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0c437d1cb2f12b348a3529e2547518f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  movboundMin: {x: -6, y: -4}
+  movboundMax: {x: 10, y: 10}
   speed: 25
 --- !u!4 &66501449
 Transform:
@@ -168,6 +170,7 @@ Transform:
   - {fileID: 1335066582}
   - {fileID: 1705816835}
   - {fileID: 995536299}
+  - {fileID: 977036864}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1353,6 +1356,53 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 952973862}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &977036863
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 977036864}
+  - component: {fileID: 977036865}
+  m_Layer: 0
+  m_Name: Muzzle2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &977036864
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977036863}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.48, y: 2.8, z: 4.73}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 66501449}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &977036865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 977036863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5835242b6e2f56e41897c47a0f54c230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  firerate: 0.2
+  projectile: {fileID: 3095185236066385968, guid: 206d8de32498ef844a776ff2ef61188f, type: 3}
+  ShootButton: Fire2
 --- !u!1 &995536298
 GameObject:
   m_ObjectHideFlags: 0
@@ -1378,7 +1428,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 995536298}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05, y: 2.8, z: 4.73}
+  m_LocalPosition: {x: 0.68, y: 2.8, z: 4.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1397,8 +1447,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5835242b6e2f56e41897c47a0f54c230, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firerate: 2
+  firerate: 0.2
   projectile: {fileID: 3095185236066385968, guid: 206d8de32498ef844a776ff2ef61188f, type: 3}
+  ShootButton: Fire1
 --- !u!1001 &1228859952
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1898,7 +1949,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705816832}
   m_LocalRotation: {x: 0.06343166, y: -0, z: -0, w: 0.9979862}
-  m_LocalPosition: {x: 0, y: 7.84, z: -17.28}
+  m_LocalPosition: {x: 0, y: 8.29, z: -17.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
